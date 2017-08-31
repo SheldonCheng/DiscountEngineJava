@@ -25,5 +25,13 @@ public class TestDiscountEngine {
 		c.Add(newItem);
 		assertTrue(c.getQuantity() == count +1 );	
 	}
+	
+	@Test
+	public void testRemoveProductFromCatalog() {
+		int count = c.getQuantity();
+		c.Remove("alpha");
+		assertTrue(c.getQuantity() == count -1 );	
+	}
+	
 
 }

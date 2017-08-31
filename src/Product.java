@@ -18,4 +18,7 @@ public class Product {
 		return fPrice;
 	}
 
+	public String GetitemCode () {
+		return sItemCode;
+	}
 }

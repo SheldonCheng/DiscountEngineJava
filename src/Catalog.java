@@ -20,8 +20,18 @@ public class Catalog {
 		CatalogList.add(newItem);
 	}
 	
-	public void Remove (Product item) {
-        CatalogList.remove(item);
+	public void Remove (String itemCode) {
+
+		Product p = null;
+		
+		for (int i = 0 ; i< CatalogList.size(); i++)
+		{
+			p = CatalogList.get(i);
+			if (p.sItemCode == itemCode) {
+				CatalogList.remove(i);
+			}
+		}
+	
 	}
 
 	public int getQuantity () {
