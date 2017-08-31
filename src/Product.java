@@ -1,4 +1,3 @@
-package POS;
 
 public class Product {
 	
@@ -19,4 +18,7 @@ public class Product {
 		return fPrice;
 	}
 
+	public String GetitemCode () {
+		return sItemCode;
+	}
 }

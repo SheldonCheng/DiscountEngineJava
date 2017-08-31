@@ -1,12 +1,9 @@
-package DiscountEngineTest;
-
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import POS.Catalog;
-import POS.Product;
+import Catalog;
 
 public class TestDiscountEngine {
 
@@ -30,5 +27,13 @@ public class TestDiscountEngine {
 		c.Add(newItem);
 		assertTrue(c.getQuantity() == count +1 );	
 	}
+	
+	@Test
+	public void testRemoveProductFromCatalog() {
+		int count = c.getQuantity();
+		c.Remove("alpha");
+		assertTrue(c.getQuantity() == count -1 );	
+	}
+	
 
 }
