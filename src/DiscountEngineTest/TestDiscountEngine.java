@@ -1,7 +1,12 @@
+package DiscountEngineTest;
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import POS.Catalog;
+import POS.Product;
 
 public class TestDiscountEngine {
 
