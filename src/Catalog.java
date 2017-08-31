@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import POS.Product;
+
 public class Catalog {
 
 	private ArrayList<Product> CatalogList = new ArrayList<Product>();
@@ -8,11 +10,11 @@ public class Catalog {
 	public Catalog (){
 		
 		// Hard Code Items
-		Add(new Product(1,"alpha"));
-		Add(new Product(2,"beta"));
-		Add(new Product(3,"charlie"));
-		Add(new Product(4,"delta"));
-		Add(new Product(5,"echo"));
+		Add(new Product(1,1));
+		Add(new Product(2,2));
+		Add(new Product(3,3));
+		Add(new Product(4,4));
+		Add(new Product(5,5));
 				
 	}
 
@@ -20,7 +22,7 @@ public class Catalog {
 		CatalogList.add(newItem);
 	}
 	
-	public void Remove (String itemCode) {
+	public void Remove (int itemCode) {
 
 		Product p = null;
 		

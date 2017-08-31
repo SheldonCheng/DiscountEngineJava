@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class ShoppingCart {
 	
-	private HashMap<Integer, Integer> itemsByType = new HashMap<Integer, Integer>();
+	private HashMap<Product, Integer> itemsByType = new HashMap<Product, Integer>();
 
 	/*public int getDiscountItemCount() {
 
@@ -36,7 +36,7 @@ public class ShoppingCart {
 		return ItemCount;
 	}
 	
-	public void addItem (int givenType) 	{
+	public void addItem (Product givenType) 	{
 		
 		if(!itemsByType.containsKey(givenType))
 		{

@@ -7,6 +7,7 @@ import org.junit.Test;
 //import org.junit.Test;
 
 import POS.Item;
+import POS.Product;
 import POS.ShoppingCart;
 
 public class ShoppingCartTest {
@@ -28,7 +29,9 @@ public class ShoppingCartTest {
 	@Test
 	public void testCartWithOneItem() {
 		ShoppingCart cart = new ShoppingCart();
-		cart.addItem(1);
+		Product newItem = new Product(6,6);
+		
+		cart.addItem(newItem);
 		
 		int calculated = cart.getItemCount();
 		int expected = 1; 
@@ -39,8 +42,10 @@ public class ShoppingCartTest {
 	@Test
 	public void testCartWithTwoItems() {
 		ShoppingCart cart = new ShoppingCart();
-		cart.addItem(1);
-		cart.addItem(1);
+		Product newItem = new Product(6,6);
+		Product newItem2 = new Product(7,7);
+		cart.addItem(newItem);
+		cart.addItem(newItem2);
 		
 		int calculated = cart.getItemCount();
 		int expected = 2; 
@@ -52,17 +57,18 @@ public class ShoppingCartTest {
 	@Test
 	public void testCartWithTenItems() {
 		ShoppingCart cart = new ShoppingCart();
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		cart.addItem(1);
-		
+		Product newItem = new Product(6,6);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+		cart.addItem(newItem);
+
 		int calculated = cart.getItemCount();
 		int expected = 10; 
 		assertTrue(calculated == expected);

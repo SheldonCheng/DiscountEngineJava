@@ -1,10 +1,11 @@
+package POS;
 
 public class Product {
 	
 	public float fPrice;
-	public String sItemCode;
+	public int sItemCode;
 	
-	public Product (float price, String itemCode)
+	public Product (float price, int itemCode)
 	{
 		fPrice = price;
 		sItemCode = itemCode;
@@ -18,7 +19,7 @@ public class Product {
 		return fPrice;
 	}
 
-	public String GetitemCode () {
+	public int GetitemCode () {
 		return sItemCode;
 	}
 }
